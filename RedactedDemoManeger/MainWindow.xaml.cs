@@ -39,15 +39,37 @@ namespace RedactedDemoManeger
             get { return Properties.Settings.Default.ResRoot; }
             set { Properties.Settings.Default.ResRoot = value; }
         }
+
         //Main
         public MainWindow()
         {
             InitializeComponent();
-            
-            Dirs dirs = new Dirs();
-            dirs.Red = getRedDir;
-            dirs.Res = getResDir;
-            this.DataContext = dirs;
+
+            _dirs = new Dirs { Red = getRedDir, Res = getResDir, WpMod = CheckWpMod() ? "enabled" : "unabled" };
+            this.DataContext = _dirs;
+        }
+
+        //MODの状態をチェック
+        private Boolean CheckWpMod()
+        {
+            string red_dir = getRedDir;
+            if (!(red_dir.Equals("undefined")))
+            {
+                string mod_dir = red_dir + @"\zone\redacted\patch_redacted.ff";
+                return File.Exists(mod_dir);
+            }
+            return false;
+        }
+
+        //ディレクトリを保持するインスタンス
+        private Dirs _dirs;
+
+        //View更新メソッド
+        private void RefreshView()
+        {
+            _dirs.Red = getRedDir;
+            _dirs.Res = getResDir;
+            _dirs.WpMod = CheckWpMod() ? "enabled" : "unabled";
         }
 
         //RedactedRootの設定
@@ -72,10 +94,7 @@ namespace RedactedDemoManeger
                 Properties.Settings.Default.Save();
 
                 //Viewの更新
-                Dirs dirs = new Dirs();
-                dirs.Red = getRedDir;
-                dirs.Res = getResDir;
-                this.DataContext = dirs;
+                RefreshView();
             }
         }
 
@@ -101,13 +120,11 @@ namespace RedactedDemoManeger
                 Properties.Settings.Default.Save();
 
                 //Viewの更新
-                Dirs dirs = new Dirs();
-                dirs.Red = getRedDir;
-                dirs.Res = getResDir;
-                this.DataContext = dirs;
+                RefreshView();
             }
         }
 
+        //武器MOD変更
         private void sw_Weapon(object sender, RoutedEventArgs e)
         {
             string mod_dir = getRedDir + @"\zone\redacted\";
@@ -141,6 +158,9 @@ namespace RedactedDemoManeger
                     MessageBox.Show("MODファイルが見つかりません。");
                 }
             }
+
+            //Viewの更新
+            RefreshView();
         }
     }
 }

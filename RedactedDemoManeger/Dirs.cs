@@ -31,14 +31,22 @@ namespace RedactedDemoManeger
             }
         }
 
+        private string wpmod;
+        public string WpMod
+        {
+            get { return wpmod; }
+            set
+            {
+                wpmod = value;
+                OnPropertyChanged("WpMod");
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string name)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(name));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

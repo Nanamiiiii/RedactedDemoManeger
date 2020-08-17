@@ -8,21 +8,23 @@
         Title="Redacted Demo Maneger" Height="345" Width="826"
         ResizeMode="NoResize">
     <Grid Background="Black" Opacity="0.8">
-        <TextBlock HorizontalAlignment="Left" Margin="20,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="273" Visibility="Visible" Foreground="White" FontSize="24" FontFamily="Bahnschrift"><Run Text="Redacted Demo "/><Run Text="Man"/><Run Text="a"/><Run Text="ger"/><Run Text=" "/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="20,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="273" Visibility="Visible" Foreground="#FF965EFF" FontSize="24" FontFamily="Bahnschrift"><Run Text="Redacted Demo "/><Run Text="Man"/><Run Text="a"/><Run Text="ger"/><Run Text=" "/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="55,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontFamily="Bahnschrift" FontSize="20"><Run Language="ja-jp" Text="Place of Redacted : "/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="235,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" Foreground="White" FontSize="20" FontFamily="Bahnschrift"><Run Language="ja-jp" Text="{Binding Red}"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="64,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="163" Foreground="White" FontSize="20" FontFamily="Bahnschrift"><Run Language="ja-jp" Text="Place of Reserve : "/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="64,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Foreground="White" FontSize="20" FontFamily="Bahnschrift"><Run Language="ja-jp" Text="Place of Reserve : "/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Height="22" Margin="235,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" Foreground="White" FontSize="20" FontFamily="Bahnschrift"><Run Language="ja-jp" Text="{Binding Res}"/></TextBlock>
-        <Button Name="RedSet" Click="RedSet_Click" Content="Set" HorizontalAlignment="Left" Height="23" Margin="708,66,0,0" VerticalAlignment="Top" Width="74"/>
-        <Button Name="ResSet" Click="ResSet_Click" Content="Set" HorizontalAlignment="Left" Height="23" Margin="708,101,0,0" VerticalAlignment="Top" Width="74"/>
-        <StackPanel Orientation="Horizontal" Margin="-3,129,-2.333,59" HorizontalAlignment="Center" Width="826">
-            <Button Content="Switch Weapon MOD"  Click = "sw_Weapon" Margin="50,45" Width="318"/>
-            <Button Content="Operate demo files" Margin="50,45" Width="318"/>
+        <Button Name="RedSet" Click="RedSet_Click" Content="Set" HorizontalAlignment="Left" Height="23" Margin="708,64,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button Name="ResSet" Click="ResSet_Click" Content="Set" HorizontalAlignment="Left" Height="23" Margin="708,98,0,0" VerticalAlignment="Top" Width="74"/>
+        <StackPanel Orientation="Horizontal" Margin="-3,137,-2.333,59.333" HorizontalAlignment="Center" Width="826">
+            <Button Content="Switch Weapon MOD"  Click = "sw_Weapon" Margin="50,55,50,25.333" Width="318"/>
+            <Button Content="Operate demo files" Margin="50,25" Width="318"/>
         </StackPanel>
         <Separator Height="5" Margin="10,253,10,0" VerticalAlignment="Top"/>
         <StackPanel Height="38" Margin="0,264,-0.333,0" Width="821" Orientation="Horizontal" VerticalAlignment="Top">
             <TextBlock TextWrapping="Wrap" Text="Made by Nanamiiiii" Foreground="#FF5A5A5A" FontFamily="Source Sans Pro ExtraLight" FontSize="18" Height="24" Margin="15,7,10,7" TextAlignment="Center"/>
             <TextBlock TextWrapping="Wrap" Text="v0.0.1" VerticalAlignment="Center" Foreground="#FF727272" Margin="10,7" Height="24" FontSize="18" HorizontalAlignment="Center" TextAlignment="Center" FontFamily="Source Sans Pro" FontStyle="Italic"/>
         </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Margin="50,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Foreground="White" FontFamily="Bahnschrift Light" TextAlignment="Center"><Run Text="Custom Weapon "/><Run Text="Mod : "/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="237,162,0,0" TextWrapping="Wrap" Text="{Binding WpMod}" VerticalAlignment="Top" Width="100" Height="22" Foreground="#FF13DCF1" FontSize="18" FontFamily="Bahnschrift Light" TextAlignment="Center"/>
     </Grid>
 </Window>
