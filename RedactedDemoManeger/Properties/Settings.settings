@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RedactedDemoManeger.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RedRoot" Type="System.String" Scope="User">
+      <Value Profile="(Default)">undefined</Value>
+    </Setting>
+    <Setting Name="ResRoot" Type="System.String" Scope="User">
+      <Value Profile="(Default)">undefined</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
