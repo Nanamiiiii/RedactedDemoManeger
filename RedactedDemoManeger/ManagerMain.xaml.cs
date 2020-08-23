@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace RedactedDemoManeger
 {
     /// <summary>
-    /// DemoManager.xaml の相互作用ロジック
+    /// ManagerMain.xaml の相互作用ロジック
     /// </summary>
-    public partial class DemoManager : NavigationWindow
+    public partial class ManagerMain : Page
     {
-        public DemoManager()
+        public ManagerMain()
         {
             InitializeComponent();
         }

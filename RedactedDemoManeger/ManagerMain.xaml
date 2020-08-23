@@ -1,0 +1,25 @@
+﻿<Page x:Class="RedactedDemoManeger.ManagerMain"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RedactedDemoManeger"
+      mc:Ignorable="d" 
+      d:DesignHeight="345" d:DesignWidth="826"
+      Title="ManagerMain">
+
+    <Grid Background="Black" Opacity="0.8">
+        <TextBlock HorizontalAlignment="Left" Margin="36,17,0,0" TextWrapping="Wrap" Text="DemoManager" VerticalAlignment="Top" Foreground="White" FontFamily="Bahnschrift" TextAlignment="Center" FontSize="24"/>
+        <StackPanel HorizontalAlignment="Left" Height="255" Margin="0,46,0,0" VerticalAlignment="Top" Width="826">
+            <StackPanel Height="127" Orientation="Horizontal">
+                <Button Content="Add" Width="220" Margin="100,10,100,9.667"/>
+                <Button Content="Reserve" Width="220" Margin="100,10,100,9.667"/>
+            </StackPanel>
+            <StackPanel Height="127" Orientation="Horizontal">
+                <Button Content="Exchange" Width="220" Margin="100,10,100,9.667"/>
+                <Button Content="Delete" Width="220" Margin="100,10,100,9.667"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>
